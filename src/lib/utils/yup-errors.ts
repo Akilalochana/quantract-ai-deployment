@@ -1,6 +1,6 @@
 import * as yup from "yup";
 
-const getYupErrors = <T extends Record<string, any>>(
+const getYupErrors = <T extends Record<string, unknown>>(
   error: yup.ValidationError
 ): Partial<T> => {
   const errors = error.inner.reduce((acc, curr: yup.ValidationError) => {

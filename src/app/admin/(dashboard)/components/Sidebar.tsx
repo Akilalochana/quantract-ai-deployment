@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 
 export default function AdminSidebar() {
@@ -69,7 +70,7 @@ export default function AdminSidebar() {
     <aside className="admin-sidebar">
       <div className="sidebar-header">
         <Link href="/admin/dashboard" className="sidebar-logo">
-          <img src="/images/logo.svg" alt="Quantract AI" />
+          <Image src="/images/logo.svg" alt="Quantract AI" width={32} height={32} />
           <span>Quantract</span>
         </Link>
       </div>

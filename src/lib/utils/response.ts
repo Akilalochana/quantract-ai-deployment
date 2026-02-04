@@ -1,11 +1,11 @@
 import { NextResponse } from "next/server";
 
 export class ApiResponse {
-  static success(message: string, data?: any) {
+  static success(message: string, data?: unknown) {
     return NextResponse.json({ success: true, message, data }, { status: 200 });
   }
 
-  static successWithAuth(message: string, token: string, expiration: number, data?: any) {
+  static successWithAuth(message: string, token: string, expiration: number, data?: unknown) {
     const response = NextResponse.json(
       { success: true, message, data },
       { status: 200 }
@@ -23,7 +23,7 @@ export class ApiResponse {
     return response;
   }
 
-  static failed(message: string, errors?: any) {
+  static failed(message: string, errors?: unknown) {
     return NextResponse.json({ success: false, message, errors }, { status: 400 });
   }
 
@@ -39,7 +39,7 @@ export class ApiResponse {
     return NextResponse.json({ success: false, message }, { status: 404 });
   }
 
-  static serverError(error: any) {
+  static serverError(error: unknown) {
     console.error(error);
     return NextResponse.json(
       { success: false, message: "Internal server error" },

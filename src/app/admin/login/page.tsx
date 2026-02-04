@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
+import Image from "next/image";
 import "./login.css";
 
 export default function AdminLoginPage() {
@@ -43,7 +45,7 @@ export default function AdminLoginPage() {
       <div className="admin-login-card">
         <div className="admin-login-header">
           <div className="admin-login-logo">
-            <img src="/images/logo.svg" alt="Quantract AI" />
+            <Image src="/images/logo.svg" alt="Quantract AI" width={48} height={48} />
           </div>
           <h1>Admin Login</h1>
           <p>Sign in to access the admin dashboard</p>
@@ -88,7 +90,7 @@ export default function AdminLoginPage() {
         </form>
 
         <div className="admin-login-footer">
-          <a href="/">← Back to Website</a>
+          <Link href="/">← Back to Website</Link>
         </div>
       </div>
     </div>
