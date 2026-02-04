@@ -1,0 +1,490 @@
+/* Career Page Styles */
+
+/* Hero Section */
+.career-hero {
+  position: relative;
+  background: linear-gradient(to bottom right, #393939, #374151);
+  color: white;
+  padding: 6rem 0 5rem;
+}
+
+@media (max-width: 768px) {
+  .career-hero {
+    padding: 6rem 0 3rem;
+  }
+}
+
+.career-hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.career-hero-content {
+  max-width: 64rem;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.career-hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .career-hero-title {
+    font-size: 3.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .career-hero-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .career-hero-title {
+    font-size: 2rem;
+  }
+}
+
+.career-hero-highlight {
+  color: #f1c40f;
+}
+
+.career-hero-description {
+  font-size: 1.25rem;
+  color: #e5e7eb;
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (max-width: 768px) {
+  .career-hero-description {
+    font-size: 1.125rem;
+    padding: 0 1.5rem;
+  }
+}
+
+.career-hero-wave {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  height: 3rem;
+}
+
+.career-hero-wave svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .career-hero-wave {
+    height: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .career-hero-wave {
+    height: 1.5rem;
+  }
+}
+
+.career-hero-wave .wave-fill {
+  fill: #ffffff;
+}
+
+/* Job Listings Section */
+.job-listings {
+  padding: 5rem 0;
+  background-color: white;
+}
+
+.job-listings-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.job-category {
+  margin-bottom: 4rem;
+}
+
+.category-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #393939;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #f1c40f;
+}
+
+.job-card {
+  background-color: #f8f9fa;
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.job-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.job-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #393939;
+  margin-bottom: 1rem;
+}
+
+.job-meta {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+  color: #666;
+}
+
+.job-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+}
+
+.job-description {
+  color: #666;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.apply-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: #f1c40f;
+  color: #393939;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(241, 196, 15, 0.2);
+}
+
+.apply-button:hover {
+  background-color: #e6b800;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(241, 196, 15, 0.3);
+}
+
+.apply-button svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  transition: transform 0.3s ease;
+}
+
+.apply-button:hover svg {
+  transform: translateX(4px);
+}
+
+/* Job Requirements */
+.job-requirements {
+  margin-bottom: 1.5rem;
+}
+
+.job-requirements h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #393939;
+  margin-bottom: 0.5rem;
+}
+
+.job-requirements ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  color: #666;
+}
+
+.job-requirements li {
+  margin-bottom: 0.25rem;
+  line-height: 1.5;
+}
+
+/* No Jobs Message */
+.no-jobs-message {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #666;
+}
+
+.no-jobs-message svg {
+  color: #ccc;
+  margin-bottom: 1.5rem;
+}
+
+.no-jobs-message h2 {
+  font-size: 1.75rem;
+  color: #393939;
+  margin-bottom: 1rem;
+}
+
+.no-jobs-message p {
+  max-width: 500px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Apply Modal */
+.apply-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.apply-modal {
+  background: white;
+  border-radius: 1rem;
+  width: 100%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+}
+
+.apply-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.apply-modal-header h2 {
+  font-size: 1.25rem;
+  color: #393939;
+  margin-bottom: 0.25rem;
+}
+
+.apply-modal-header p {
+  font-size: 0.95rem;
+  color: #f1c40f;
+  font-weight: 500;
+}
+
+.apply-modal-close {
+  background: none;
+  border: none;
+  color: #999;
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  transition: all 0.2s ease;
+}
+
+.apply-modal-close:hover {
+  color: #333;
+  background: #f0f0f0;
+}
+
+.apply-modal-form {
+  padding: 1.5rem;
+}
+
+.apply-message {
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.apply-message.success {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.apply-message.error {
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.apply-form-group {
+  margin-bottom: 1.25rem;
+}
+
+.apply-form-group label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #393939;
+  margin-bottom: 0.5rem;
+}
+
+.apply-form-group input,
+.apply-form-group textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.apply-form-group input:focus,
+.apply-form-group textarea:focus {
+  outline: none;
+  border-color: #f1c40f;
+  box-shadow: 0 0 0 3px rgba(241, 196, 15, 0.1);
+}
+
+.apply-form-group input:disabled,
+.apply-form-group textarea:disabled {
+  background: #f5f5f5;
+  cursor: not-allowed;
+}
+
+.apply-form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.apply-modal-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+}
+
+.apply-btn-cancel {
+  padding: 0.75rem 1.5rem;
+  background: #f0f0f0;
+  color: #666;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.apply-btn-cancel:hover:not(:disabled) {
+  background: #e0e0e0;
+}
+
+.apply-btn-submit {
+  padding: 0.75rem 1.5rem;
+  background: #f1c40f;
+  color: #393939;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.apply-btn-submit:hover:not(:disabled) {
+  background: #e6b800;
+  transform: translateY(-1px);
+}
+
+.apply-btn-submit:disabled,
+.apply-btn-cancel:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 480px) {
+  .apply-modal {
+    max-height: 100vh;
+    border-radius: 0;
+  }
+
+  .apply-modal-actions {
+    flex-direction: column-reverse;
+  }
+
+  .apply-btn-cancel,
+  .apply-btn-submit {
+    width: 100%;
+  }
+}
+
+/* File Upload Styles */
+.file-upload-container {
+  position: relative;
+}
+
+.file-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.file-upload-label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 1rem;
+  background: #f8f9fa;
+  border: 2px dashed #e0e0e0;
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.file-upload-label:hover {
+  border-color: #f1c40f;
+  background: #fffdf5;
+}
+
+.file-upload-label svg {
+  flex-shrink: 0;
+  color: #888;
+}
+
+.file-input:focus + .file-upload-label {
+  border-color: #f1c40f;
+  box-shadow: 0 0 0 3px rgba(241, 196, 15, 0.2);
+}
+
+.upload-spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

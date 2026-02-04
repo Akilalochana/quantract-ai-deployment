@@ -1,0 +1,294 @@
+/* Header Component Styles - Brand Colors Only */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(57, 57, 57, 0.08);
+  z-index: 50;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-nav {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0.75rem 2rem;
+}
+
+@media (max-width: 768px) {
+  .header-nav {
+    padding: 0.75rem 1rem;
+  }
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo section - Brand Colors */
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.header-logo:hover {
+  transform: scale(1.02);
+}
+
+.header-logo-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+
+.header-logo:hover .header-logo-icon {
+  transform: scale(1.05);
+}
+
+.header-logo-icon span {
+  color: white;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.header-logo-text h1 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--brand-gray);
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.header-logo-text p {
+  font-size: 0.75rem;
+  color: var(--gray-text);
+  margin: 0;
+}
+
+/* Desktop navigation - Brand Colors with Smooth Transitions */
+.header-desktop-nav {
+  display: none;
+  align-items: center;
+  gap: 0.25rem;
+  background: rgba(57, 57, 57, 0.04);
+  padding: 0.375rem;
+  border-radius: 2rem;
+}
+
+.header-nav-link {
+  color: var(--gray-text);
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-decoration: none;
+  padding: 0.5rem 1.25rem;
+  border-radius: 1.5rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.header-nav-link:hover {
+  color: var(--brand-gray);
+  background: white;
+  box-shadow: 0 2px 8px rgba(57, 57, 57, 0.1);
+}
+
+.header-nav-link.active {
+  color: var(--brand-gray);
+  background: white;
+  box-shadow: 0 2px 10px rgba(57, 57, 57, 0.12);
+}
+
+/* Dropdown styles - Brand Colors */
+.header-nav-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.header-dropdown {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+  min-width: 12rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+  border: 1px solid var(--border-color, #e5e7eb);
+}
+
+.header-nav-item:hover .header-dropdown {
+  opacity: 1;
+  visibility: visible;
+}
+
+.header-dropdown-link {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: var(--gray-text, #6b7280);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  border-radius: 0.5rem;
+}
+
+.header-dropdown-link:hover {
+  background-color: var(--brand-yellow-light, #fef3c7);
+  color: var(--brand-gray, #393939);
+}
+
+/* CTA Button - Brand Colors */
+.header-cta-button {
+  background: var(--brand-yellow);
+  color: var(--brand-gray);
+  padding: 0.625rem 1.5rem;
+  border-radius: 2rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 14px rgba(241, 196, 15, 0.3);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+.header-cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(241, 196, 15, 0.4);
+  background: var(--brand-yellow-dark);
+}
+
+.header-cta-button svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* Mobile menu button - Brand Colors */
+.header-mobile-button {
+  display: flex;
+  width: 2.5rem;
+  height: 2.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(57, 57, 57, 0.05);
+  border: none;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-mobile-button:hover {
+  background: var(--brand-yellow-light);
+}
+
+.header-mobile-button span {
+  background-color: var(--brand-gray);
+  display: block;
+  transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  height: 2px;
+  width: 1.25rem;
+  border-radius: 2px;
+  margin: 2px 0;
+}
+
+.header-mobile-button.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.header-mobile-button.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.header-mobile-button.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Mobile menu - Smooth Transition */
+.header-mobile-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  margin-top: 0;
+}
+
+.header-mobile-menu.open {
+  max-height: 500px;
+  opacity: 1;
+  margin-top: 1rem;
+  padding: 1rem;
+  background: rgba(57, 57, 57, 0.03);
+  border-radius: 1rem;
+}
+
+.header-mobile-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.header-mobile-nav .header-nav-link {
+  color: var(--gray-text);
+  font-weight: 500;
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-mobile-nav .header-nav-link:hover,
+.header-mobile-nav .header-nav-link.active {
+  background: white;
+  color: var(--brand-gray);
+  box-shadow: 0 2px 8px rgba(57, 57, 57, 0.08);
+}
+
+.header-mobile-nav .header-cta-button {
+  background: var(--brand-yellow);
+  color: var(--brand-gray);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  width: fit-content;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.header-mobile-nav .header-cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(241, 196, 15, 0.4);
+}
+
+/* Responsive design */
+@media (min-width: 768px) {
+  .header-desktop-nav {
+    display: flex;
+  }
+
+  .header-mobile-button {
+    display: none;
+  }
+}

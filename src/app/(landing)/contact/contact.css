@@ -1,0 +1,104 @@
+/* Contact Page Styles */
+
+/* Hero Section */
+.contact-hero {
+  position: relative;
+  background: linear-gradient(to bottom right, #393939, #374151);
+  color: white;
+  padding: 6rem 0 5rem;
+}
+
+@media (max-width: 768px) {
+  .contact-hero {
+    padding: 6rem 0 3rem;
+  }
+}
+
+.contact-hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.contact-hero-content {
+  max-width: 64rem;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.contact-hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .contact-hero-title {
+    font-size: 3.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-hero-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-hero-title {
+    font-size: 2rem;
+  }
+}
+
+.contact-hero-highlight {
+  color: #f1c40f;
+}
+
+.contact-hero-description {
+  font-size: 1.25rem;
+  color: #e5e7eb;
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (max-width: 768px) {
+  .contact-hero-description {
+    font-size: 1.125rem;
+    padding: 0 1.5rem;
+  }
+}
+
+.contact-hero-wave {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  height: 3rem;
+}
+
+.contact-hero-wave svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .contact-hero-wave {
+    height: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-hero-wave {
+    height: 1.5rem;
+  }
+}
+
+.contact-hero-wave .wave-fill {
+  fill: #ffffff;
+}

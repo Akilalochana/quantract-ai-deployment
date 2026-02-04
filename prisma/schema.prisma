@@ -1,0 +1,62 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+// Admin model - for login
+model Admin {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  password  String
+  name      String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relations
+  jobPosts JobPost[]
+}
+
+// Job Post model - for careers page
+model JobPost {
+  id          String   @id @default(cuid())
+  title       String
+  category    String   // Engineering, Design, Marketing, etc.
+  location    String
+  type        String   // Full-time, Part-time, Contract, Remote
+  experience  String   // 1+ years, 2+ years, etc.
+  description String   @db.Text
+  requirements String[] // Array of requirements
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relations
+  adminId String
+  admin   Admin  @relation(fields: [adminId], references: [id])
+
+  // Applications for this job
+  applications JobApplication[]
+}
+
+// Job Application model - for career applications
+model JobApplication {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  phone     String?
+  resumeUrl String?  // URL to uploaded resume
+  coverLetter String? @db.Text
+  status    String   @default("pending") // pending, reviewed, accepted, rejected
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relations
+  jobPostId String
+  jobPost   JobPost @relation(fields: [jobPostId], references: [id], onDelete: Cascade)
+}
