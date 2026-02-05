@@ -32,13 +32,25 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    // Get token from environment
+    const token = process.env.BLOB_READ_WRITE_TOKEN || process.env.quantractai_READ_WRITE_TOKEN;
+    
+    if (!token) {
+      console.error("No blob token found in environment");
+      return NextResponse.json(
+        { success: false, message: "Server configuration error" },
+        { status: 500 }
+      );
+    }
+
     // Generate unique filename
     const fileExtension = file.name.split(".").pop() || "pdf";
     const uniqueFilename = `resumes/${uuidv4()}.${fileExtension}`;
 
-    // Upload to Vercel Blob
+    // Upload to Vercel Blob with explicit token
     const blob = await put(uniqueFilename, file, {
       access: "public",
+      token: token,
     });
 
     return NextResponse.json({
